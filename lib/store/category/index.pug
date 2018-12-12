@@ -1,0 +1,61 @@
+section.store-category
+	.container
+		.category-filter
+			.dropdown
+				.title
+					p Sort by
+					span.mdi.mdi-chevron-down
+				.content
+					ul
+						li 
+							a(href='#') ATM
+						li 
+							a(href='#') Bakeries / Desserts / Beverages
+						li 
+							a(href='#') Beauty / Wellness
+						li 
+							a(href='#') Bookstore
+						li 
+							a(href='#') Cafés
+						li 
+							a(href='#') Clinic
+						li.active
+							a(href='#') Cosmetics
+						li 
+							a(href='#') Enrichment / Education
+						li 
+							a(href='#') Entertainment
+						li 
+							a(href='#') Home Furnishings & Home Appliances
+						li 
+							a(href='#') Jewellery, Watches & Optical
+						li 
+							a(href='#') Lifestyle
+						li 
+							a(href='#') Maternity & Children's Wear
+						li 
+							a(href='#') Restaurants 
+						li 
+							a(href='#') Shoes, Bags & Accessories
+						li 
+							a(href='#') Sportswear
+						li 
+							a(href='#') Supermarket
+						li 
+							a(href='#') Toys & Souvenirs
+	.container.category-list
+		.row
+			- for(i=1;i<=12;i++)
+				.col-lg-3.col-md-4.col-6
+					a.item(href='store.detail.html')
+						figure
+							.img-box
+								img(src='./img/s_category/c_'+i+'.png', alt='')
+							figcaption
+								h4 Okara
+								p
+									span.mdi.mdi-table-of-contents
+									span Leisure & Entertainment
+								p
+									span.mdi.mdi-map-marker
+									span Floor: 03

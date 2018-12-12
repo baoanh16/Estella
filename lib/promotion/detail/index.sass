@@ -1,0 +1,69 @@
+.promotion-detail
+	padding: r(60px) 0
+	.content
+		.briefContent, .fullContent
+			font-family: $arimo
+			font-size: r(15px)
+			p,li
+				margin-bottom: .5rem
+			a
+				color: color-get($mau, main)
+				text-decoration: none
+		.title
+			margin-bottom: 1rem
+			h2
+				font-size: r(36px)
+				font-weight: 700
+				color: lighten(black,20%)
+		.briefContent
+			margin-bottom: 1rem
+			p
+				span
+					&:first-child
+						font-weight: 700
+						color: lighten(black,20%)
+		.fullContent
+			ul
+				list-style-type: none
+				li
+					&:before
+						content: '-'
+						margin-right: .5rem
+		.image
+			margin-top: 1rem
+			margin-bottom: 1.5rem
+
+
+.promotion-other
+	border-top: 1px solid darken(white,12%)
+	padding: r(60px) 0
+	.swiper-container
+		margin: 0 -15px
+		padding: 0 15px
+		.swiper-wrapper
+			.swiper-slide
+				.item
+					text-decoration: none
+					figure
+						+tran(.2s)
+						.img-box
+							overflow: hidden
+						figcaption
+							padding: 1rem r(20px)
+							h4
+								font-size: r(18px)
+								font-weight: 700
+								color: lighten(black,20%)
+								margin-bottom: .25rem
+								+tran(.2s)
+							p
+								font-size: r(15px)
+								font-weight: 400
+								color: lighten(black, 40%)
+								font-family: $arimo
+					&:hover
+						figure
+							box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+							figcaption
+								h4
+									color: color-get($mau, main)

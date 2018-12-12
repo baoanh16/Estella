@@ -1,0 +1,14 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'Categories'
+	- bodyClass = 'store-category-page'
+
+block header
+	include ../lib/header/index.pug
+block main
+	include ../lib/banner/index.pug
+	include ../lib/store/nav/index.pug
+	include ../lib/store/category/index.pug
+block footer
+	include ../lib/footer/index.pug

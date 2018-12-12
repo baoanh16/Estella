@@ -7,10 +7,10 @@ import sass from 'gulp-sass'
 import gutil from 'gulp-util'
 import concat from 'gulp-concat'
 import rename from 'gulp-rename'
+import uglify from 'gulp-uglify-es'
+import prefix from 'gulp-autoprefixer'
 import imagemin from 'gulp-imagemin'
 import cleanCSS from 'gulp-clean-css'
-import uglifyes from 'gulp-uglify-es'
-import prefix from 'gulp-autoprefixer'
 import sourcemaps from 'gulp-sourcemaps'
 import browserSync from 'browser-sync'
 import tsify from 'tsify'
@@ -34,7 +34,7 @@ const clean_images = () => del('./dist/img')
 ////////////////////////////////////////////
 // Copy images from source to dist
 export function copy_images() {
-	return gulp.src('./src/img/**.{gif,png,jpg,jpeg,svg}')
+	return gulp.src('./src/img/**/**.{gif,png,jpg,jpeg,svg}')
 		.pipe(gulp.dest('./dist/img'))
 }
 // END HERE
@@ -89,7 +89,7 @@ export function concatenate_script() {
 	let plugins = JSON.parse(fs.readFileSync('./plugins.json'));
 	return gulp.src(plugins.scripts)
 		.pipe(concat('core.min.js'))
-		.pipe(uglifyes())
+		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
 }
 // END HERE
@@ -118,7 +118,7 @@ export function browserify_task() {
 		.pipe(sourcemaps.init({
 			loadMaps: true
 		}))
-		// .pipe(uglifyes())
+		.pipe(uglify())
 		.on('error', function (err) { console.log('Error: ' + err.message); })
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('dist/js'))
@@ -131,8 +131,8 @@ export function browserify_task() {
 // Convert Pug to html and copy to dist
 export function html() {
 	return gulp.src([
-		'./src/**/*.pug',
-		'!./src/{**/\_*,**/\_*/**}.pug'
+		'./src/**/**.pug',
+		'!./src/{**/\_**,**/\_**/**}.pug'
 	])
 		.pipe(pug({
 			pretty: '\t',
@@ -148,7 +148,7 @@ export function html() {
 export function css() {
 	return gulp.src([
 		'./src/styles/main.sass',
-		'!./src/styles/\_*.sass'
+		'!./src/styles/\_**.sass'
 	])
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
@@ -178,10 +178,10 @@ export function watchDist() {
 	})
 	gulp.watch('./src/img', gulp.series(clean_images, copy_images))
 	gulp.watch('./plugins.json', gulp.parallel(concatenate_css, concatenate_script))
-	gulp.watch('./plugins/*.js', concatenate_script)
-	gulp.watch('./plugins/*.css', concatenate_css)
-	gulp.watch(['./src/styles/*.sass', './lib/**/*.sass'], css)
-	gulp.watch(['./src/**/*.pug', './lib/**/*.pug'], html)
+	gulp.watch('./plugins/**.js', concatenate_script)
+	gulp.watch('./plugins/**.css', concatenate_css)
+	gulp.watch(['./src/styles/**.sass', './lib/**/**.sass'], css)
+	gulp.watch(['./src/**/**.pug', './lib/**/**.pug'], html)
 	gulp.watch('./dist').on('change', browserSync.reload)
 }
 watchedBrowserify.on('update', browserify_task);
@@ -203,26 +203,25 @@ export {
 // Default task when run Gulp
 const dev = gulp.series(
 	clean,
-	gulp.parallel(
-		copy_fonts1,
-		copy_fonts2,
-	),
-	gulp.parallel(
-		copy_images,
-
-	),
-	gulp.parallel(
-		concatenate_css,
-		concatenate_script,
-	),
-	gulp.parallel(
-		browserify_task,
-		html,
-		css,
-	),
+	copy_fonts1,
+	copy_fonts2,
+	copy_images,
+	concatenate_css,
+	concatenate_script,
+	browserify_task,
+	css,
+	html,
 	watchDist,
+)
+
+const cpr = gulp.series(
+	clean_images,
+	compress_images
 )
 // END HERE
 ////////////////////////////////////////////
 
+export {
+	cpr
+}
 export default dev;

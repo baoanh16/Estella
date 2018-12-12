@@ -1,0 +1,95 @@
+.location-list
+	padding: r(60px) 0
+	.location-desc
+		margin-bottom: r(32px)
+		h2
+			font-size: r(24px)
+			font-weight: 400
+			color: darken(white,50%)
+			text-align: center
+	.tab-nav
+		.item
+			height: 100%
+			+tran(.2s)
+			cursor: pointer
+			.img-box
+				display: flex
+				flex-wrap: wrap
+				justify-content: center
+				position: relative
+				img
+					filter: grayscale(100%)
+					+tran(.2s)
+				&:after
+					content: ''
+					position: absolute
+					top: 100%
+					left: 50%
+					transform: translateX(-50%)
+					width: 80px
+					height: 2px
+					background: color-get($mau, main)
+			figcaption
+				padding-top: r(24px)
+				text-align: center
+				padding-right: 1rem
+				padding-left: 1rem
+				padding-bottom: 1rem
+				+media-breakpoint-up(lg)
+					padding-right: r(40px)
+					padding-left: r(40px)
+					padding-bottom: r(32px)
+					
+				p
+					font-family: $arimo
+					font-size: r(15px)
+					font-weight: 400
+					color: lighten(black, 20%)
+					strong
+						font-weight: 700
+			&:hover, &.active
+				box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2)
+				img
+					filter: grayscale(0)
+	.tab-content
+		padding-top: r(70px)
+		.location
+			position: relative
+			.img-map
+				border: 3px solid darken(white,12%)
+			.content
+				padding: r(85px) r(50px) 2rem
+				position: absolute
+				color: white
+				top: 0
+				left: 0
+				width: 390px
+				max-width: 390px
+				text-align: center
+				background: color-rgba(color-get($mau, xanh-4),.85 )
+				+media-breakpoint-up(xl)
+					left: calc(100% / 13)
+				.img
+					position: absolute
+					left: 50%
+					top: 0
+					transform: translateX(-50%) translateY(-36px)
+				.desc
+					margin-bottom: 2rem
+					h4
+						font-size: r(30px)
+						font-weight: 700
+						margin-bottom: .5rem
+					p
+						font-size: r(15px)
+						font-weight: 400
+				.btn-view-map
+					width: r(200px)
+					min-height: r(50px)
+					border-radius: r(25px)
+					background: color-get($mau, main)
+					display: flex
+					justify-content: center
+					align-items: center
+					color: white
+					margin: auto

@@ -1,0 +1,54 @@
+.store-nav
+	padding-top: r(80px)
+	.store-search
+		position: relative
+		margin-bottom: 2rem
+		button
+			position: absolute
+			top: 0
+			right: 0
+			height: 100%
+			width: r(50px)
+			background: none
+			border: 0
+			outline: none
+			&:before
+				+fontawesome('\f002', $faf)
+				font-size: 22px
+				color: color-get($mau, main)
+		input
+			box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2)
+			width: 100%
+			height: r(50px)
+			border: 1px solid darken(white,12%)
+			&:focus
+				box-shadow: 0px 0px 10px 0px #329944
+	.store-menu-list
+		ul
+			list-style-type: none
+			display: flex
+			justify-content: center
+			li
+				padding: 0 r(20px)
+				a
+					font-size: r(18px)
+					font-weight: 700
+					color: darken(white,50%)
+					+tran(.2s)
+					text-decoration: none
+				+ li
+					border-left: 1px solid darken(white,12%)
+				&.active, &:hover
+					a
+						color: color-get($mau, main)
+			+media-breakpoint-up(sm)
+				li
+					padding: 0 r(35px)
+					a
+						font-size: r(19px)
+			+media-breakpoint-up(lg)
+				li
+					padding: 0 r(50px)
+					a
+						font-size: r(20px)
+			

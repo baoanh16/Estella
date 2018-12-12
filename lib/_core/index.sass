@@ -1,0 +1,134 @@
+html, body
+	font-family: $philo
+	font-size: 15px
+	font-weight: 400
+	line-height: 1.5
+	width: 100%
+	// max-width: 1600px
+	margin-right: auto
+	margin-left: auto
+	+media-breakpoint-up(lg)
+		font-size: 16.5px
+	+media-breakpoint-up(xl)
+		font-size: 18px
+
+#goTopButton
+	position: fixed
+	z-index: 5
+	width: 35px
+	height: 35px
+	bottom: 10px
+	right: 15px
+	display: none
+	+tran(.2s)
+	opacity: 0
+	transform: translateY(10px)
+	.goTop-wrap
+		border: 1px solid color-get($mau, main)
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		width: 100%
+		height: 100%
+		+tran(.2s)
+		span
+			color: color-get($mau, main)
+			+tran(.2s)
+	+media-breakpoint-up(lg)
+		bottom: 10px
+		right: 45px
+		width: 40px
+		height: 40px
+	&.active
+		transform: translateY(0)
+		opacity: 1
+		display: flex!important
+	&:hover
+		.goTop-wrap
+			background: color-rgba(color-get($mau, main), .75)
+		span
+			color: white
+
+.container
+	@media (min-width: 1440px)
+		max-width: 1390px
+	@media (min-width: 1600px)
+		max-width: 1440px
+
+ul, li, p, h1, h2, h3, h4, h5, h6
+	margin-bottom: 0
+	padding: 0
+
+img
+	width: 100%
+
+body
+	+media-breakpoint-down(md)
+		&.active
+			overflow: hidden
+			padding-right: 17px
+
+.main-title
+	font-size: r(36px)
+	font-weight: 700
+	font-family: $philo
+	margin-bottom: 1rem
+	text-align: center
+
+input, textarea, select
+	display: block
+	padding: .375rem .75rem
+	font-size: 1rem
+	line-height: 1.5
+	background-clip: padding-box
+	border-radius: 4px
+	border: 1px solid darken(white, 40%)
+	outline: none
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out
+	&:focus
+		box-shadow: 0 0 .25rem color-get($mau, main)
+		border-color: color-get($mau, main)
+		outline: color-get($mau, main)
+
+.store-category-page
+	.store-nav
+		.store-menu-list
+			.nav-item
+				&:nth-child(2)
+					.nav-link
+						color: color-get($mau,main)
+
+.product-detail-page
+	.Module-165
+		display: none
+	.Module-168
+		display: none
+
+.newspager
+	padding-bottom: r(80px)
+	.modulepager
+		.pagination
+			display: flex
+			justify-content: center
+			list-style-type: none
+			li
+				width: r(40px)
+				height: r(40px)
+				border: 1px solid transparent
+				a,span
+					display: flex
+					font-size: r(15px)
+					font-family: $arimo
+					display: flex
+					justify-content: center
+					align-items: center
+					text-decoration: none
+					height: 100%
+					width: 100%
+					color: darken(white,40%)
+				&.active, &:hover
+					border-color: color-get($mau, main)
+					a,span
+						color: color-get($mau, main)

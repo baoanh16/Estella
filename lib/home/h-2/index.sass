@@ -1,0 +1,78 @@
+.home-2
+	padding-top: 12px
+	article
+		overflow: hidden
+		.item-list
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			margin: 0 -6px
+		.item
+			display: block
+			padding: 0 6px
+			flex: 0 0 100%
+			max-width: 100%
+			@media (min-width: 520px)
+				flex: 0 0 50%
+				max-width: 50%
+				&:last-child
+					margin: auto
+					// flex: 0 0 100%
+					// max-width: 100%
+			+media-breakpoint-up(lg)
+				
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+				&:first-child, &:nth-child(2)
+					flex: 0 0 50%
+					max-width: 50%
+				&:last-child
+					flex: 0 0 33.3333%
+					max-width: 33.3333%
+			figure
+				position: relative
+				margin-bottom: 12px
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					opacity: 0
+					+tran(.2s)
+					background: color-get($mau, main)
+					z-index: 1
+				.img-box
+					overflow: hidden
+					img
+						+tran(.2s)
+				figcaption
+					z-index: 2
+					position: absolute
+					width: 100%
+					left: 0
+					bottom: 0
+					+bg-grad2
+					transition: background .4s ease-in-out
+					padding: r(16px)
+					+media-breakpoint-up(lg)
+						padding: r(32px)
+					h4
+						font-size: r(24px)
+						font-weight: 700
+						color: white
+						text-align: center
+						+media-breakpoint-up(lg)
+							font-size: r(30px)
+						+media-breakpoint-up(xl)
+							font-size: r(36px)
+			&:hover
+				figure
+					&:before
+						opacity: .25
+					.img-box
+						img
+							transform: scale(1.1)
+					figcaption

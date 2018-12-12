@@ -1,0 +1,70 @@
+.contact
+	padding: r(60px) 0
+	.form-title
+		h2
+			font-size: r(42px)
+			font-weight: 700
+			color: lighten(black,20%)
+		p
+			font-size: r(15px)
+			font-weight: 400
+			color: lighten(black,40%)
+			font-family: $arimo
+	.wrap-form
+		display: flex
+		flex-wrap: wrap
+		>div
+			max-width: 100%
+			flex: 0 0 100%
+			&.frm-btnwrap
+				flex: 0 0 auto
+				max-width: auto
+			&.frm-captcha
+				flex: 0 0 50%
+				max-width: 50%
+		.form-wizard
+			margin-top: r(28px)
+			.form-group
+				input,textarea,select
+					width: 100%
+					border: 1px solid darken(white,12%)
+					border-radius: 4px
+					font-family: $arimo
+					color: darken(white,40%)
+					font-size: r(13px)
+					&:focus
+						border-color: color-get($mau, main)
+				textarea
+					min-height: r(150px)
+				select,input
+					min-height: r(50px)
+				label
+					text-transform: uppercase
+					font-family: $arimo
+					font-size: r(13px)
+					font-weight: 700
+					color: lighten(black,20%)
+		.frm-btnwrap
+			.frm-btn
+				.frm-btn-reset
+					display: none
+				.frm-btn-submit
+					background: color-get($mau, main)
+					font-size: r(18px)
+					font-weight: 400
+					color: white
+					min-height: r(60px)
+					min-width: r(240px)
+					display: flex
+					justify-content: center
+					align-items: center
+		.frm-captcha
+			.frm-captcha-input
+				label
+					display: none
+				input
+					min-height: r(60px)
+			.RadCaptcha_Default
+				img
+					width: r(280px)
+					min-height: r(60px)

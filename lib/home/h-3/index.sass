@@ -1,0 +1,88 @@
+.home-3
+	padding-top: r(28px)
+	padding-bottom: r(36px)
+	.time-box
+		padding: r(32px) r(27px) r(28px)
+		text-align: center
+		position: relative
+		h2
+			margin-bottom: 16px
+		.content
+			border: 10px solid transparent
+			padding: 16px
+			border-image: url('../img/index/icon_1.png') 144/16 stretch
+			background-repeat: no-repeat
+			background-size: 100%
+			background-position: center
+			font-family: $arimo
+			p
+				display: flex
+				flex-direction: column
+				+ p
+					margin-top: r(10px)
+	.personal-page-box
+		font-family: $arimo
+		border: 1px solid darken(white, 20%)
+		margin-top: 30px
+		+media-breakpoint-up(lg)
+			margin-top: 0
+		.box-title
+			padding: 8px
+			display: flex
+			flex-wrap: wrap
+			align-items: flex-start
+			+media-breakpoint-up(lg)
+				padding: 15px 16px
+			.logo
+				width: 60px
+				margin-right: r(10px)
+			.title
+				p 
+					font-size: r(16px)
+					font-weight: 700
+					color: lighten(black, 20%)
+					line-height: 1
+				span
+					font-size: r(14px)
+					font-weight: 400
+					color: lighten(black,20%)
+					line-height: 1
+			.btn-personal-page
+				width: 100%
+				display: flex
+				font-family: 'Philosopher', sans-serif
+				color: white
+				background: color-get($mau, main)
+				font-size: r(18px)
+				border-radius: 0
+				justify-content: center
+				align-items: center
+				height: 40px
+				+media-breakpoint-up(sm)
+					width: r(200px)
+					margin-left: auto
+				+media-breakpoint-up(lg)
+					width: 100%
+				+media-breakpoint-up(xl)
+					width: r(200px)
+		.box-img
+			padding: 0 8px 7px 8px
+			+media-breakpoint-up(lg)
+				padding: 0 16px 7px 16px
+		.box-small-caption
+			p
+				font-size: r(13px)
+				font-weight: 400
+				color: lighten(black,20%)
+				padding: 0 8px 0 8px
+				margin-bottom: 10px
+				+media-breakpoint-up(lg)
+					padding: 0 16px 0 16px
+					margin-bottom: 14px
+	.social-box
+		// display: flex
+		// justify-content: center
+		margin-top: 30px
+		+media-breakpoint-up(lg)
+			margin-top: 0
+		

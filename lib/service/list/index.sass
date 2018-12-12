@@ -1,0 +1,49 @@
+.service-list
+	padding: r(60px) 0
+	.swiper-container
+		.swiper-wrapper
+			.swiper-slide
+				.item
+					figure
+						position: relative
+						margin-bottom: 12px
+						position: relative
+						&:before
+							content: ''
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+							opacity: 0
+							+tran(.2s)
+							background: color-get($mau, main)
+							z-index: 1
+						.img-box
+							overflow: hidden
+							img
+								+tran(.2s)
+						figcaption
+							z-index: 2
+							position: absolute
+							width: 100%
+							left: 0
+							bottom: 0
+							+bg-grad2
+							transition: background .4s ease-in-out
+							padding: r(21px)
+							h4
+								font-size: r(24px)
+								font-weight: 700
+								color: white
+								text-align: center
+								+media-breakpoint-up(lg)
+									font-size: r(30px)
+					&:hover
+						figure
+							&:before
+								opacity: .25
+							.img-box
+								img
+									transform: scale(1.1)
+							figcaption

@@ -1,0 +1,18 @@
+section.promotion-list
+	.container
+		h2.main-title What's Hot
+		.row
+			- for(i=1;i<10;i++)
+				.col-md-4.col-sm-6
+					a.item(href="promotion.detail.html")
+						figure
+							.img-box
+								img(src="./img/promotion/p_"+i+".png", alt="")
+							figcaption
+								h4 Spring / Summer 2018 fashion ad campaign roundup
+								p 
+									span Location: 
+									span Versace - Level 3
+								p 
+									span Duration: 
+									span 15.11 - 16.12.2018

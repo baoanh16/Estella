@@ -1,0 +1,29 @@
+.reward-nav
+	nav
+		background: darken(white,5%)
+		ul
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			font-family: $arimo
+			li
+				list-style-type: none
+				a
+					font-size: r(14px)
+					color: lighten(black,20%)
+					text-decoration: none
+					display: block
+					display: flex
+					justify-content: center
+					align-items: center
+					+tran(.2s)
+					min-height: r(40px)
+					min-width: r(125px)
+					+media-breakpoint-up(sm)
+						font-size: r(16px)
+						min-width: r(200px)
+						min-height: r(60px)
+				&:hover, &.active
+					a
+						background: color-get($mau, main)
+						color: white

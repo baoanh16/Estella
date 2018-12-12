@@ -1,0 +1,64 @@
+.store-detail
+	padding: r(75px) 0
+	.store-content
+		padding-top: 1rem
+		.fullContent,.briefContent
+			font-family: $arimo
+		.title
+			h2
+				margin-bottom: .8rem
+				font-weight: 700
+				font-size: r(36px)
+				color: lighten(black,20%)
+		.fullContent
+			ul
+				list-style-type: none
+				li
+					margin-bottom: .7rem
+					font-size: r(15px)
+					span
+						&:first-child
+							margin-right: .5rem
+							color: color-get($mau, main)
+		.briefContent
+			p
+				font-size: r(16px)
+				color: lighten(black,40%)
+.store-detail-event
+	padding: r(60px) 0
+	background: color-get($mau, trang-1)
+	+media-breakpoint-up(lg)
+		background-image: url('../img/s_detail/bg_1.jpg')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+	.swiper-container
+		margin: 0 -15px
+		padding: 0 15px
+		.swiper-wrapper
+			.swiper-slide
+				.item
+					text-decoration: none
+					figure
+						+tran(.2s)
+						.img-box
+							overflow: hidden
+						figcaption
+							padding: 1rem r(20px)
+							h4
+								font-size: r(18px)
+								font-weight: 700
+								color: lighten(black,20%)
+								margin-bottom: .25rem
+								+tran(.2s)
+							p
+								font-size: r(15px)
+								font-weight: 400
+								color: lighten(black, 40%)
+								font-family: $arimo
+					&:hover
+						figure
+							box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+							figcaption
+								h4
+									color: color-get($mau, main)

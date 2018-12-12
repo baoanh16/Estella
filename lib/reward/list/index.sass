@@ -1,0 +1,46 @@
+.reward-list
+	padding: r(60px) 0
+	.img-box
+		margin-bottom: .5rem
+		+media-breakpoint-up(lg)
+			margin-bottom: 0
+	.content-wrap
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		.content
+			margin-bottom: 2rem
+			.main-title
+				text-align: left
+			p
+				font-size: r(18px)
+				font-weight: 400
+				color: darken(white,50%)
+				font-family: $arimo
+		.button-wrap
+			.btn
+				max-height: r(40px)
+				padding: 0
+				img
+					max-width: r(120px)
+				+media-breakpoint-up(sm)
+					max-height: r(50px)
+					img
+						max-width: r(150px)
+				+ .btn
+					margin-left: .5rem
+			.btn-play
+				border: 1px solid color-get($mau, main)
+				border-radius: 5px
+				width: r(40px)
+				height: r(40px)
+				display: inline-flex
+				justify-content: center
+				align-items: center
+				+media-breakpoint-up(sm)
+					width: r(50px)
+					height: r(50px)
+				span
+					font-size: r(30px)
+					color: color-get($mau, main)
