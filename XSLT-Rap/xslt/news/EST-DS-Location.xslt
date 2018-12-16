@@ -30,7 +30,7 @@
 
 
 	<xsl:template match="News" mode="Nav">
-		<div class="col-md-3">
+		<div class="col-md-3 col-6">
 			<figure class="item">
 				<xsl:if test="position() = 1">
 					<xsl:attribute name='class'>

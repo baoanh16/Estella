@@ -3,7 +3,9 @@
 	.location-desc
 		margin-bottom: r(32px)
 		h2
-			font-size: r(24px)
+			font-size: r(20px)
+			+media-breakpoint-up(lg)
+				font-size: r(24px)
 			font-weight: 400
 			color: darken(white,50%)
 			text-align: center
@@ -17,6 +19,7 @@
 				flex-wrap: wrap
 				justify-content: center
 				position: relative
+				align-items: center
 				img
 					filter: grayscale(100%)
 					+tran(.2s)
@@ -35,11 +38,12 @@
 				padding-right: 1rem
 				padding-left: 1rem
 				padding-bottom: 1rem
+				display: none
 				+media-breakpoint-up(lg)
 					padding-right: r(40px)
 					padding-left: r(40px)
 					padding-bottom: r(32px)
-					
+					display: block
 				p
 					font-family: $arimo
 					font-size: r(15px)
@@ -47,7 +51,7 @@
 					color: lighten(black, 20%)
 					strong
 						font-weight: 700
-			&:hover, &.active
+			&:hover
 				box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2)
 				img
 					filter: grayscale(0)
@@ -55,6 +59,9 @@
 		padding-top: r(70px)
 		.location
 			position: relative
+			+media-breakpoint-down(md)
+				display: flex
+				flex-direction: column-reverse
 			.img-map
 				border: 3px solid darken(white,12%)
 			.content
@@ -69,6 +76,11 @@
 				background: color-rgba(color-get($mau, xanh-4),.85 )
 				+media-breakpoint-up(xl)
 					left: calc(100% / 13)
+				+media-breakpoint-down(md)
+					width: 100%
+					max-width: 100%
+					position: relative
+					padding: r(85px) r(15px) r(30px) r(15px)
 				.img
 					position: absolute
 					left: 50%

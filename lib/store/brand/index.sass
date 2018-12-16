@@ -49,8 +49,10 @@
 						font-family: $philo
 						font-weight: 700
 						color: lighten(black,20%)
-						font-size: r(20px)
 						+tran(.4st)
+						font-size: 1rem
+						+media-breakpoint-up(sm)
+							font-size: r(20px)
 				.desc
 					max-width: 100%
 					flex: 0 0 100%

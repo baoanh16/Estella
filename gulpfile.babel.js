@@ -218,10 +218,19 @@ const cpr = gulp.series(
 	clean_images,
 	compress_images
 )
+
+const watch = gulp.series(
+	concatenate_css,
+	concatenate_script,
+	browserify_task,
+	css,
+	watchDist,
+)
 // END HERE
 ////////////////////////////////////////////
 
 export {
-	cpr
+	cpr,
+	watch
 }
 export default dev;

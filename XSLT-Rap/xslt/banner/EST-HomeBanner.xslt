@@ -18,6 +18,10 @@
 
 	<xsl:template match="Banner">
 		<div class="swiper-slide">
+			<a>
+			<xsl:attribute name="href">
+				<xsl:value-of select="Url"></xsl:value-of>
+			</xsl:attribute>
 			<div class="img">
 				<xsl:attribute name="bg-img">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -41,6 +45,7 @@
 					</p>
 				</div>
 			</div>
+			</a>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

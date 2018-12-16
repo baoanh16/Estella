@@ -45,6 +45,7 @@
 						a
 							font-size: r(14px)
 							color: lighten(black, 20%)
+							display: block
 						&:hover,&.active
 							a
 								color: color-get($mau, main)
@@ -61,13 +62,17 @@
 					border: 2px solid darken(white,8%)
 					+tran(.2s)
 				figcaption
-					padding: 1rem
+					padding: 1rem 0
+					+media-breakpoint-up(sm)
+						padding: 1rem
 					+tran(.2s)
 					h4
-						font-size: r(20px)
 						font-weight: 700
 						color: lighten(black,20%)
 						+tran(.2s)
+						font-size: 1rem
+						+media-breakpoint-up(sm)
+							font-size: r(20px)
 					p
 						font-family: $arimo
 						font-size: r(15px)
@@ -75,7 +80,7 @@
 						color: lighten(black,40%)
 						+tran(.2s)
 						.mdi
-							margin-right: .5rem
+							margin-right: .125rem
 							+tran(.2s)
 			&:hover
 				figure

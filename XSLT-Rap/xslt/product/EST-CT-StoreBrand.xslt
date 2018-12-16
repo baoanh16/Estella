@@ -21,6 +21,18 @@
 								</h2>
 							</div>
 							<div class="fullContent">
+								<p>
+									<span class="mdi mdi-table-of-contents"></span>
+									<span>
+										<xsl:value-of select="/ProductDetail/SubTitle" disable-output-escaping='yes'></xsl:value-of>
+									</span>
+								</p>
+								<p>
+									<span class="mdi mdi-map-marker"></span>
+									<span>
+										<xsl:value-of select="/ProductDetail/Code" disable-output-escaping='yes'></xsl:value-of>
+									</span>
+								</p>
 								<xsl:value-of select='/ProductDetail/FullContent' disable-output-escaping='yes'></xsl:value-of>
 							</div>
 							<div class="briefContent">
@@ -35,13 +47,15 @@
 
 	
 	<xsl:template match='ProductImages'>
-		<img>
-			<xsl:attribute name='src'>
-				<xsl:value-of select='ImageUrl'></xsl:value-of>
-			</xsl:attribute>
-			<xsl:attribute name='alt'>
-				<xsl:value-of select='Title'></xsl:value-of>
-			</xsl:attribute>
-		</img>
+		<xsl:if test="position()=1">
+			<img>
+				<xsl:attribute name='src'>
+					<xsl:value-of select='ImageUrl'></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name='alt'>
+					<xsl:value-of select='Title'></xsl:value-of>
+				</xsl:attribute>
+			</img>
+		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>

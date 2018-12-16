@@ -51,6 +51,7 @@ $(document).ready(function () {
 	store.toggleTab();
 	store.storeDetailEvent();
 	store.StoreDetailMoveModule();
+	store.activeStoreFilter();
 	// Promotion
 	promotion.promotionOther();
 	// Service

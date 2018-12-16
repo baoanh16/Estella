@@ -10,21 +10,21 @@
 						<xsl:value-of select='/ZoneList/Title'></xsl:value-of>
 					</h2>
 					<div class="row">
-						<div class="col">
+						<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
+						<!-- <div class="col">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
-									<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 									
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</section>
 	</xsl:template>
 
 	<xsl:template match="Zone">
-		<div class="swiper-slide">
+		<div class="col-md-4 col-sm-4">
 			<a class="item">
 				<xsl:attribute name='href'>
 					<xsl:value-of select='Url'></xsl:value-of>

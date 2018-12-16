@@ -106,33 +106,158 @@ input, textarea, select
 	.Module-168
 		display: none
 
-.newspager
-	padding-bottom: r(80px)
-	.modulepager
-		.pagination
-			display: flex
-			justify-content: center
-			list-style-type: none
-			li
-				width: r(40px)
-				height: r(40px)
-				border: 1px solid transparent
+.newspager, .productpager
+	padding-top: r(30px)
+	padding-bottom: r(60px)
+.modulepager
+	.pagination
+		display: flex
+		justify-content: center
+		list-style-type: none
+		li
+			width: r(40px)
+			height: r(40px)
+			border: 1px solid transparent
+			a,span
+				display: flex
+				font-size: r(15px)
+				font-family: $arimo
+				display: flex
+				justify-content: center
+				align-items: center
+				text-decoration: none
+				height: 100%
+				width: 100%
+				color: darken(white,40%)
+			&.active, &:hover
+				border-color: color-get($mau, main)
 				a,span
-					display: flex
-					font-size: r(15px)
-					font-family: $arimo
-					display: flex
-					justify-content: center
-					align-items: center
-					text-decoration: none
-					height: 100%
-					width: 100%
-					color: darken(white,40%)
-				&.active, &:hover
-					border-color: color-get($mau, main)
-					a,span
-						color: color-get($mau, main)
+					color: color-get($mau, main)
 
 .store-detail
 	.briefcontent-1
+		display: none
+
+.category-list
+	.briefcontent-2
+		display: none
+
+
+.Module-184
+	position: fixed
+	right: 0
+	width: 50px
+	height: 50px
+	background: color-get($mau, main)
+	z-index: 13
+	top: 100px
+	+media-breakpoint-up(md)
+		top: 160px
+	.ModuleContent
+		height: 100%
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 100%
+			color: white
+			font-size: r(20px)
+
+
+.search-page
+	padding: 2rem 0
+	.search-page-top
+		.searchcontrols
+			margin-bottom: 1rem
+			.form-inline
+				+media-breakpoint-up(sm)
+					max-width: 510px
+				.form-group
+					margin-bottom: 0
+					input
+						border: 1px solid darken(white,12%)
+						border-radius: 4px
+						font-family: $arimo
+						height: 40px
+						font-size: r(14px)
+						color: color-get($mau, main)
+						&:focus
+							border-color: color-get($mau, main)
+							box-shadow: 0 0 .25rem color-get($mau,main)
+					&:last-child
+						padding-left: .5rem
+						input
+							width: 100px
+							color: white
+							background: color-get($mau, main)
+					&:first-child
+						flex-grow: 1
+						width: auto
+						flex-basis: 0
+						input
+							width: 100%
+	.btn-reindex
+		margin-top: .5rem
+		margin-bottom: 1rem
+		+media-breakpoint-up(sm)
+			max-width: 402.5px
+		input
+			width: 100%
+			border: 1px solid darken(white,12%)
+			border-radius: 4px
+			font-family: $arimo
+			color: white
+			background: color-get($mau, main)
+			height: 40px
+			font-size: r(14px)
+			&:focus
+				border-color: color-get($mau, main)
+				box-shadow: 0 0 .25rem color-get($mau,main)
+	.searchresults
+		.modulepager:first-child
+			display: none
+		.searchresultlist
+			.searchresult
+				+tran(.4s)
+				&:nth-child(odd)
+					background: lighten(color-rgba(color-get($mau, main),.1 ),5%)
+				&:nth-child(even)
+					background: darken(color-rgba(color-get($mau, main),.2 ),5%)
+				&:hover
+					transform: translateY(-5px)
+					box-shadow: 0 0 .5px color-get($mau, main)
+				.NeatHtml
+					padding: .5rem .75rem 0 .75rem!important
+					h3
+						a
+							color: darken(color-get($mau,main), 30%)
+					
+		.modulepager:last-child
+			.pagination
+				display: flex
+				justify-content: center
+				list-style-type: none
+				li
+					width: r(40px)
+					height: r(40px)
+					border: 1px solid transparent
+					a,span
+						display: flex
+						font-size: r(15px)
+						font-family: $arimo
+						display: flex
+						justify-content: center
+						align-items: center
+						text-decoration: none
+						height: 100%
+						width: 100%
+						color: darken(white,40%)
+					&.active, &:hover
+						border-color: color-get($mau, main)
+						a,span
+							color: color-get($mau, main)
+
+.product-detail-page
+	.productdetailpager
 		display: none

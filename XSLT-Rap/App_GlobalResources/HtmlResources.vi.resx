@@ -274,6 +274,18 @@
     <value>Xem thêm</value>
   </data>
   <data name="PagePrivateText" xml:space="preserve">
-    <value>Social place to unwind, share good times, dine, shop, learn & play.</value>
+    <value>Social place to unwind, share good times, dine, shop, learn &amp; play.</value>
+  </data>
+  <data name="StoreDirectoryText" xml:space="preserve">
+    <value>Cửa hàng</value>
+  </data>
+  <data name="SortByText" xml:space="preserve">
+    <value>Sắp xếp</value>
+  </data>
+  <data name="LocationText" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="DurationText" xml:space="preserve">
+    <value>Thời gian</value>
   </data>
 </root>

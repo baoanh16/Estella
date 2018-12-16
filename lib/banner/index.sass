@@ -17,6 +17,14 @@
 			background: black
 			.swiper-slide
 				opacity: .6
+				+media-breakpoint-down(sm)
+					height: 190px
+					overflow: hidden
+					img
+						object-fit: cover
+						object-position: center
+						width: initial
+						height: inherit
 	.breadcrumb-wrap
 		position: absolute
 		top: 0

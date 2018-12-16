@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "test",
 		"start": "gulp",
-		"cpr": "gulp cpr"
+		"cpr": "gulp cpr",
+		"watch": "gulp watch"
 	},
 	"repository": {
 		"type": "git",

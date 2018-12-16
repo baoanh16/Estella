@@ -277,6 +277,18 @@
     <value>View more</value>
   </data>
   <data name="PagePrivateText" xml:space="preserve">
-    <value>Social place to unwind, share good times, dine, shop, learn & play.</value>
+    <value>Social place to unwind, share good times, dine, shop, learn &amp; play.</value>
+  </data>
+  <data name="StoreDirectoryText" xml:space="preserve">
+    <value>Store Dicrectory</value>
+  </data>
+  <data name="SortByText" xml:space="preserve">
+    <value>Sort By</value>
+  </data>
+  <data name="LocationText" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="DurationText" xml:space="preserve">
+    <value>Duration</value>
   </data>
 </root>

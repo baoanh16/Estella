@@ -15,9 +15,23 @@
 									<xsl:value-of select='/NewsDetail/EditLink' disable-output-escaping='yes'></xsl:value-of>
 								</h2>
 							</div>
-							<div class="briefContent">
+							<!-- <div class="briefContent">
 								<xsl:value-of select='/NewsDetail/BriefContent' disable-output-escaping='yes'></xsl:value-of>
-							</div>
+							</div> -->
+							<p>
+								<span class="mdi mdi-map-marker"></span>
+								<b>Location</b>
+								<span>
+									<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping='yes'></xsl:value-of>
+								</span>
+							</p>
+							<p>
+								<span class="fas fa-clipboard-list"></span>
+								<b>Duration</b>
+								<span>
+									<xsl:value-of select="/NewsDetail/SubTitle" disable-output-escaping='yes'></xsl:value-of>
+								</span>
+							</p>
 							<div class="fullContent">
 								<xsl:value-of select='/NewsDetail/FullContent' disable-output-escaping='yes'></xsl:value-of>
 								<div class="image">

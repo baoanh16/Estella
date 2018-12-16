@@ -5,7 +5,7 @@
 
 	<xsl:template match="/">
 
-		<section class="promotion-list">
+		<section class="service-detail">
 			<div class="container">
 				<h2 class="main-title">
 					<xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
@@ -18,36 +18,26 @@
 	</xsl:template>
 
 	<xsl:template match="News">
-		<div class="col-md-4 col-sm-6">
+		<div class="col-sm-6 col-lg-4">
 			<a class="item">
-				<xsl:attribute name='href'>
-					<xsl:value-of select='Url'></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name='target'>
-					<xsl:value-of select='Title'></xsl:value-of>
+				<xsl:attribute name="target">
+					<xsl:value-of select="target"></xsl:value-of>
 				</xsl:attribute>
 				<figure>
 					<div class="img-box">
 						<img>
-						<xsl:attribute name='src'>
-							<xsl:value-of select='ImageUrl'></xsl:value-of>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:attribute name='alt'>
-							<xsl:value-of select='Title'></xsl:value-of>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
 						</img>
 					</div>
 					<figcaption>
 						<h4>
-							<xsl:value-of select='Title'></xsl:value-of>
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 						</h4>
-						<p>
-						<xsl:value-of select="BriefContent" disable-output-escaping='yes'></xsl:value-of>
-						</p>
-						<p>
-						<xsl:value-of select="SubTitle" disable-output-escaping='yes'></xsl:value-of>
-						</p>
-						
 					</figcaption>
 				</figure>
 			</a></div>

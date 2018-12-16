@@ -12,6 +12,16 @@
 			padding: 0 6px
 			flex: 0 0 100%
 			max-width: 100%
+			&:nth-child(1)
+				order: 1
+			&:nth-child(2)
+				order: 4
+			&:nth-child(3)
+				order: 3
+			&:nth-child(4)
+				order: 2
+			&:nth-child(5)
+				order: 5
 			@media (min-width: 520px)
 				flex: 0 0 50%
 				max-width: 50%
@@ -23,7 +33,7 @@
 				
 				flex: 0 0 33.3333%
 				max-width: 33.3333%
-				&:first-child, &:nth-child(2)
+				&:first-child, &:nth-child(4)
 					flex: 0 0 50%
 					max-width: 50%
 				&:last-child
@@ -33,17 +43,17 @@
 				position: relative
 				margin-bottom: 12px
 				position: relative
-				&:before
-					content: ''
-					position: absolute
-					top: 0
-					left: 0
-					width: 100%
-					height: 100%
-					opacity: 0
-					+tran(.2s)
-					background: color-get($mau, main)
-					z-index: 1
+				// &:before
+				// 	content: ''
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	width: 100%
+				// 	height: 100%
+				// 	opacity: 0
+				// 	+tran(.2s)
+				// 	background: color-get($mau, main)
+				// 	z-index: 1
 				.img-box
 					overflow: hidden
 					img
@@ -70,8 +80,8 @@
 							font-size: r(36px)
 			&:hover
 				figure
-					&:before
-						opacity: .25
+					// &:before
+					// 	opacity: .25
 					.img-box
 						img
 							transform: scale(1.1)

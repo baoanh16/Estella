@@ -7,7 +7,7 @@
 		<section class="store-nav">
 			<div class="container">
 				<h2 class="main-title">
-					<xsl:value-of select='/ZoneList/ModuleTitle'></xsl:value-of>
+					<xsl:value-of select='/ZoneList/StoreDirectoryText'></xsl:value-of>
 				</h2>
 				<div class="row">
 					<div class="col-lg-4 col-sm-8 offset-lg-4 offset-sm-2">

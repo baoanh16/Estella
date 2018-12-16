@@ -4,7 +4,7 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="personal-page-box">
+		<!-- <div class="personal-page-box"> -->
 			<div class="box-title">
 				<div class="logo">
 					<img src="/Data/Sites/1/skins/default/img/logo.png" alt=""></img>
@@ -26,7 +26,7 @@
 			<div class="box-small-caption">
 				<!-- <p>Social place to unwind, share good times, dine, shop, learn & play.</p> -->
 			</div>
-		</div>
+		<!-- </div> -->
 	</xsl:template>
 
 	<xsl:template match="Banner">

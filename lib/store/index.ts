@@ -61,4 +61,12 @@ export class Store {
 			}).watch();
 		}
 	}
+
+	activeStoreFilter() {
+		$('body').on('click', '.ajaxfilterresponse .ajaxlink', function () {
+			$(this).parent().addClass('active')
+			$(this).parent().siblings().removeClass('active')
+			$('.store-category .category-filter .dropdown .content').hide()
+		})
+	}
 }
