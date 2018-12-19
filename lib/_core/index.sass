@@ -1,9 +1,9 @@
 html, body
-	font-family: $philo
 	font-size: 15px
 	font-weight: 400
 	line-height: 1.5
 	width: 100%
+	font-family: $philo
 	// max-width: 1600px
 	margin-right: auto
 	margin-left: auto
@@ -11,7 +11,10 @@ html, body
 		font-size: 16.5px
 	+media-breakpoint-up(xl)
 		font-size: 18px
-
+	// &.vi-vn
+	// 	font-family: $madurai
+	// &.en-us
+	// 	font-family: $philo
 #goTopButton
 	position: fixed
 	z-index: 5
@@ -69,13 +72,13 @@ body
 		&.active
 			overflow: hidden
 			padding-right: 17px
-
 .main-title
 	font-size: r(36px)
 	font-weight: 700
 	font-family: $philo
 	margin-bottom: 1rem
 	text-align: center
+
 
 input, textarea, select
 	display: block

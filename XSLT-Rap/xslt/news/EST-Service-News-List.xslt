@@ -20,6 +20,9 @@
 	<xsl:template match="News">
 		<div class="col-sm-6 col-lg-4">
 			<a class="item">
+			<xsl:attribute name="href">
+				<xsl:value-of select="Url"></xsl:value-of>
+			</xsl:attribute>
 				<xsl:attribute name="target">
 					<xsl:value-of select="target"></xsl:value-of>
 				</xsl:attribute>

@@ -14,8 +14,10 @@
 			p
 				margin-bottom: .7rem
 				font-size: r(15px)
+				display: flex
 				span
 					&:first-child
+						flex: 0 0 1rem
 						margin-right: .5rem
 						color: color-get($mau, main)
 		.briefContent
@@ -41,6 +43,8 @@
 						+tran(.2s)
 						.img-box
 							overflow: hidden
+							img
+								object-fit: fill
 						figcaption
 							padding: 1rem r(20px)
 							h4

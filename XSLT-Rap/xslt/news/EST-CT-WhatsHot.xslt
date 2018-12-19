@@ -20,14 +20,18 @@
 							</div> -->
 							<p>
 								<span class="mdi mdi-map-marker"></span>
-								<b>Location</b>
+								<b>
+									<xsl:value-of select="/NewsDetail/LocationText"></xsl:value-of>
+									</b>
 								<span>
 									<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping='yes'></xsl:value-of>
 								</span>
 							</p>
 							<p>
 								<span class="fas fa-clipboard-list"></span>
-								<b>Duration</b>
+								<b>
+									<xsl:value-of select="/NewsDetail/DurationText"></xsl:value-of>
+								</b>
 								<span>
 									<xsl:value-of select="/NewsDetail/SubTitle" disable-output-escaping='yes'></xsl:value-of>
 								</span>
@@ -56,7 +60,9 @@
 		</section>
 		<section class="container">
 			<div class="promotion-other">
-				<h2 class="main-title">More Happenings</h2>
+				<h2 class="main-title">
+					<xsl:value-of select="/NewsDetail/MoreHappeningText"></xsl:value-of>
+				</h2>
 				<div class="row">
 					<div class="col">
 						<div class="swiper-container">
@@ -76,9 +82,6 @@
 				<xsl:attribute name='href'>
 					<xsl:value-of select='Url'></xsl:value-of>
 				</xsl:attribute>
-				<xsl:attribute name='target'>
-					<xsl:value-of select='Title'></xsl:value-of>
-				</xsl:attribute>
 				<figure>
 					<div class="img-box">
 						<img>
@@ -94,7 +97,7 @@
 						<h4>
 							<xsl:value-of select='Title' disable-output-escaping='yes'></xsl:value-of>
 						</h4>
-						<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
+						<p><xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of></p>
 					</figcaption>
 				</figure>
 			</a>

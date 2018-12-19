@@ -31,6 +31,11 @@
 
 	<xsl:template match="Language" mode="List">
 		<li>
+			<!-- <xsl:if test="position()=2">
+				<xsl:attribute name="class">
+					<xsl:text>d-none</xsl:text>
+				</xsl:attribute>
+			</xsl:if> -->
 			<a>
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>

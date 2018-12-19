@@ -4,8 +4,26 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="row">
-			<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
+		
+		<div class="ajaxresponse">
+			<input type="hidden" id="txtKeyword">
+			  <xsl:attribute name="value">
+				<xsl:value-of select="/ProductList/KeyWord"/>
+			  </xsl:attribute>
+			</input>
+			<input type="hidden" id="urlKeywordUrlOutParam">
+			  <xsl:attribute name="value">
+				<xsl:value-of select="/ProductList/KeywordUrlOutParam"/>
+			  </xsl:attribute>
+			</input>
+			<input type="hidden" id="urlKeywordUrlWithParam">
+			  <xsl:attribute name="value">
+				<xsl:value-of select="/ProductList/KeywordUrlWithParam"/>
+			  </xsl:attribute>
+			</input>
+			<div class="row">
+				<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
+			</div>
 		</div>
 	</xsl:template>
 

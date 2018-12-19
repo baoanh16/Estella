@@ -2,7 +2,17 @@ export class Home {
 	homeBanner() {
 		let homeBanner = new Swiper('.home-1 .swiper-container', {
 			speed: 750,
-			simulateTouch: false,
+			simulateTouch: true,
+			loop: true,
+			disableOnInteraction: false,
+			autoplay: {
+				delay: 4000,
+			},
+			slidesPerView: 1,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
 		})
 	}
 	homeBannerButtonDown() {

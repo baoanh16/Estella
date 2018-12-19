@@ -69,4 +69,8 @@ export class Store {
 			$('.store-category .category-filter .dropdown .content').hide()
 		})
 	}
+
+	fixedImgSize() {
+		$('.category-list .item img').outerHeight($('.category-list .item').outerWidth())
+	}
 }

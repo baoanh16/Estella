@@ -1,6 +1,48 @@
 .home-1
 	position: relative
 	.swiper-container
+		.swiper-button-prev
+			background: none
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			width: 50px
+			height: 50px
+			border: 2px solid color-rgba(color-get($mau, main), 0)
+			+tran(.2s)
+			left: 25px
+			// +media-breakpoint-up(xl)
+			// 	left: 75px
+			&:before
+				+fontawesome('\f104', $faf)
+				color: white
+				font-size: r(40px)
+			&:hover
+				border-color: color-rgba(color-get($mau, main), 1)
+				&:before
+					color: color-get($mau, main)
+		.swiper-button-next
+			background: none
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			width: 50px
+			height: 50px
+			border: 2px solid color-rgba(color-get($mau, main), 0)
+			+tran(.2s)
+			right: 25px
+			// +media-breakpoint-up(xl)
+			// 	right: 75px
+			&:before
+				+fontawesome('\f105', $faf)
+				color: white
+				font-size: r(40px)
+			&:hover
+				border-color: color-rgba(color-get($mau, main), 1)
+				&:before
+					color: color-get($mau, main)
 		.swiper-slide
 			position: relative
 			.img

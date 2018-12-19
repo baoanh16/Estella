@@ -10,6 +10,8 @@
 					<div class="swiper-wrapper">
 						<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
 			</article>
 			<div class="button-next-section"><span class="lnr lnr-chevron-down"></span></div>
@@ -19,9 +21,13 @@
 	<xsl:template match="Banner">
 		<div class="swiper-slide">
 			<a>
-			<xsl:attribute name="href">
-				<xsl:value-of select="Url"></xsl:value-of>
-			</xsl:attribute>
+				<xsl:attribute name="href">
+				
+					<xsl:value-of select="Url"></xsl:value-of>
+					<xsl:if test="string-length(Url)=0">
+						<xsl:text>javascript:void(0)</xsl:text>
+					</xsl:if>
+				</xsl:attribute>
 			<div class="img">
 				<xsl:attribute name="bg-img">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>

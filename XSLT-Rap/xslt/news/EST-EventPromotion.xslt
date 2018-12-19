@@ -7,7 +7,7 @@
 
 		<div class="container">
 			<h2 class="main-title">
-				<xsl:value-of select='/NewsList/ModuleTitle'></xsl:value-of>
+				<xsl:value-of select='/NewsList/EventPromotionText'></xsl:value-of>
 			</h2>
 			<div class="row">
 				<div class="col-12">
@@ -43,7 +43,7 @@
 						<h4>
 							<xsl:value-of select='Title' disable-output-escaping='yes'></xsl:value-of>
 						</h4>
-						<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
+						<p><xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of></p>
 					</figcaption>
 				</figure>
 			</a></div>

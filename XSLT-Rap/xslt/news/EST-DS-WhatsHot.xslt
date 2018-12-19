@@ -42,10 +42,20 @@
 							<xsl:value-of select='Title'></xsl:value-of>
 						</h4>
 						<p>
-						<xsl:value-of select="BriefContent" disable-output-escaping='yes'></xsl:value-of>
+							<span>
+								<xsl:value-of select="/NewsList/LocationText"></xsl:value-of>
+							</span>
+							<span>
+								<xsl:value-of select="BriefContent" disable-output-escaping='yes'></xsl:value-of>
+							</span>
 						</p>
 						<p>
-						<xsl:value-of select="SubTitle" disable-output-escaping='yes'></xsl:value-of>
+							<span>
+								<xsl:value-of select="/NewsList/DurationText"></xsl:value-of>
+							</span>
+							<span>
+								<xsl:value-of select="SubTitle" disable-output-escaping='yes'></xsl:value-of>
+							</span>
 						</p>
 						
 					</figcaption>

@@ -21,4 +21,7 @@ export class Promotion {
 			}
 		})
 	}
+	promotionFixedImg() {
+		$('.promotion-list .item img').outerHeight($('.promotion-list .item').outerWidth())
+	}
 }

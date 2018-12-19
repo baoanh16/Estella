@@ -22,6 +22,19 @@ $(window).on('scroll', function () {
 })
 
 
+$(window).on('resize', function () {
+
+	store.fixedImgSize();
+	promotion.promotionFixedImg();
+	$('.store-detail-event .item .img-box img').outerHeight($('.store-detail-event .item .img-box').outerWidth());
+})
+
+
+$(document).ajaxComplete(function () {
+	store.fixedImgSize();
+})
+
+
 $(document).ready(function () {
 	// GoToTopButton
 	$('#goTopButton').on('click', function () {
@@ -50,12 +63,23 @@ $(document).ready(function () {
 	store.toggleFilter();
 	store.toggleTab();
 	store.storeDetailEvent();
-	store.StoreDetailMoveModule();
+	// store.StoreDetailMoveModule();
 	store.activeStoreFilter();
+	store.fixedImgSize();
+	$('.store-detail-event .item .img-box img').outerHeight($('.store-detail-event .item .img-box').outerWidth());
+	$('.store-detail .fullContent p').each(function () {
+		if ($(this).find('span:last-child').html() == "") {
+			$(this).remove()
+		}
+	})
 	// Promotion
 	promotion.promotionOther();
+	promotion.promotionFixedImg();
 	// Service
 	service.serviceList();
+	if (window.location.href.search('o2o') < 1) {
+		$('.button-wrap').remove()
+	}
 	// Location
 	location.toggleTabLocation();
 })
