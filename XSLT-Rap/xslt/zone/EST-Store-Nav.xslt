@@ -12,12 +12,16 @@
 				<div class="row">
 					<div class="col-lg-4 col-sm-8 offset-lg-4 offset-sm-2">
 						<div class="store-search">
-							<input placeholder="Quick search (Ex: Versace)"></input>
-							<button> </button>
+							<input placeholder="Tìm nhanh (Ví dụ: Annam Gourmet)">
+								<xsl:attribute name="placeholder">
+									<xsl:value-of select="/ZoneList/PlaceholderSearchText"/>
+								</xsl:attribute> 
+							</input>
+							<button></button>
 						</div>
 					</div>
 					<div class="col-12">
-						<nav class="store-menu-list">
+						<nav class="store-menu-list"> 
 							<ul>
 								<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 							</ul>
