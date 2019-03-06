@@ -804,4 +804,25 @@
   <data name="EnableKeywordFiltering" xml:space="preserve">
     <value>Enable keyword filtering</value>
   </data>
+  <data name="CopyProductButton" xml:space="preserve">
+    <value>Copy product</value>
+  </data>
+  <data name="CopyProductCopyImagesLabel" xml:space="preserve">
+    <value>Copy images?</value>
+  </data>
+  <data name="CopyProductLabel" xml:space="preserve">
+    <value>Copy product</value>
+  </data>
+  <data name="CopyProductNameLabel" xml:space="preserve">
+    <value>New product name</value>
+  </data>
+  <data name="CopyProductPublishedLabel" xml:space="preserve">
+    <value>Published?</value>
+  </data>
+  <data name="CopyProductSuccessMessage" xml:space="preserve">
+    <value>The product has been copied successfully</value>
+  </data>
+  <data name="SubZoneLabel" xml:space="preserve">
+    <value>Sub Zone</value>
+  </data>
 </root>

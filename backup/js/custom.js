@@ -1,7 +1,50 @@
 var siteRoot = "";
 $(document).ready(function () {
 
+	if(('.store-nav .store-search input').length>0)
+	{
+		$(".store-nav .store-search").on("click","button",function(e) {
+			e.preventDefault();
+			KeyWordSearh();
+		});
 
+		function KeyWordSearh() {
+			var linkSearch = $("#urlKeywordUrlOutParam").val();
+			var keyWord = $(".store-nav .store-search input").val();
+			if (keyWord != '') {
+				if (linkSearch.indexOf("?") > 0) 
+					linkSearch = linkSearch + "&keyword=" + keyWord;
+				else
+					linkSearch = linkSearch + "?keyword=" + keyWord;
+			}
+			ProcessAjax(linkSearch);
+		} 
+		SetupScriptSearch();
+
+		function SetupScriptSearch() {
+			$('.store-nav .store-search input').bind("enterKey", function(e) {
+				e.preventDefault();
+				KeyWordSearh();
+				return false;
+			});
+			$('.store-nav .store-search input').keyup(function(e) {
+				if (e.keyCode == 13) {
+					$(this).trigger("enterKey");
+					e.preventDefault();
+					return false;
+				}
+			});
+			$('#aspnetForm').on('keyup keypress', function(e) {
+				var keyCode = e.keyCode || e.which;
+				if (keyCode === 13) { 
+					e.preventDefault();
+					return false;
+				}
+			});
+			$(".store-search input").val($("#txtKeyword").val());
+		}
+	}
+	
 	/****************/
 	/* Ajax process */
 	/****************/

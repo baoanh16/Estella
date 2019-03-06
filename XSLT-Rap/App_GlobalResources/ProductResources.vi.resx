@@ -804,4 +804,25 @@
   <data name="EnableKeywordFiltering" xml:space="preserve">
     <value>Cho phép tìm kiếm theo từ khóa</value>
   </data>
+  <data name="CopyProductButton" xml:space="preserve">
+    <value>Sao chép</value>
+  </data>
+  <data name="CopyProductCopyImagesLabel" xml:space="preserve">
+    <value>Sao chép hình ảnh?</value>
+  </data>
+  <data name="CopyProductLabel" xml:space="preserve">
+    <value>Sao chép sản phẩm</value>
+  </data>
+  <data name="CopyProductNameLabel" xml:space="preserve">
+    <value>Tên sản phẩm mới</value>
+  </data>
+  <data name="CopyProductPublishedLabel" xml:space="preserve">
+    <value>Hiển thị?</value>
+  </data>
+  <data name="CopyProductSuccessMessage" xml:space="preserve">
+    <value>Sao chép sản phẩm thành công</value>
+  </data>
+  <data name="SubZoneLabel" xml:space="preserve">
+    <value>Chuyên mục phụ</value>
+  </data>
 </root>

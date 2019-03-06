@@ -301,4 +301,8 @@
 	<data name="ServiceOtherText" xml:space="preserve">
 		<value>Dịch vụ khác</value>
 	</data>
+	<data name="PlaceholderSearchText" xml:space="preserve">
+		<value>Tìm nhanh (Ví dụ: Annam Gourmet)</value>
+	</data>
+	
 </root>

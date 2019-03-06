@@ -1,0 +1,349 @@
+// .body-hidden
+// 	overflow-y: hidden
+// 	padding-right: 16px
+	
+// .modal
+// 	position: fixed
+// 	top: 0
+// 	left: 0
+// 	width: 100%
+// 	height: 100%
+// 	display: none
+// 	justify-content: center
+// 	align-items: center
+// 	z-index: 99990
+// 	&.open
+// 		display: flex
+// 	.overlay
+// 		position: absolute
+// 		width: 100%
+// 		height: 100%
+// 		background: rgba(0,0,0,.7)
+// 		top: 0
+// 		left: 0
+// 		z-index: 99991
+// 	.modal-content
+// 		position: relative
+// 		max-width: 800px
+// 		z-index: 99992
+// 	.modal-body
+// 		overflow: hidden
+// 	.modal-close
+// 		display: flex
+// 		justify-content: center
+// 		align-items: center
+// 		cursor: pointer
+// 		span
+// 			line-height: 1
+// 			font-size: 30px
+// 			color: white
+// 	&#popup-1
+// 		.modal-content
+// 			padding: 0 15px
+// 		.modal-close
+// 			position: absolute
+// 			top: 0
+// 			right: 15px
+// 			width: 30px
+// 			height: 30px
+// 		.modal-body
+// 			width: 100%
+// 			border-radius: 10px
+// 			display: flex
+// 			justify-content: center
+// 			align-items: center
+// 			a
+// 				display: inline-flex
+// 				align-items: center
+// 				justify-content: center
+// 			img
+// 				width: 100%
+// 	&#popup-2
+// 		.modal-close
+// 			position: absolute
+// 			top: 0
+// 			right: 15px
+// 			span
+// 				color: white
+// 		.overlay
+// 			background: transparent
+// 		.modal-content
+// 		.modal-body
+// 			width: 100%
+// 			padding: 0 15px
+// 			max-width: 420px
+// 			background: black
+// 			height: 100%
+// 			padding: 60px 15px
+// 			color: white
+// 			.title
+// 				figure
+// 					margin: 0
+// 					display: flex
+// 					align-items: center
+// 					margin-bottom: 16px
+// 					.imgbox
+// 						flex: 0 0 50px
+// 					figcaption
+// 						flex-basis: 0
+// 						flex-grow: 1
+// 						padding-left: 15px
+// 				h4,p
+// 					margin: 0
+// 				h4
+// 					font-size: 28px
+// 					font-weight: 700
+// 					text-transform: uppercase
+// 				p
+// 					font-size: 13px
+// 			.description
+// 				text-align: center
+// 				margin-bottom: 32px
+// 			.button
+// 				display: flex
+// 				justify-content: center
+// 				a
+// 					display: flex
+// 					justify-content: center
+// 					align-items: center
+// 					border: 1px solid white
+// 					border-radius: 8px
+// 					overflow: hidden
+// 					img
+// 						width: 100%
+// 						max-height: 60px
+// 					+ a
+// 						margin-left: 10px
+// 	&#popup-3
+// 		.modal-close
+// 			position: absolute
+// 			top: 0
+// 			right: 15px
+// 			z-index: 1
+// 			span
+// 				color: lighten(black,20%)
+// 		.modal-content
+// 			padding: 0 15px
+// 		.modal-body
+// 			.form
+// 				position: relative
+// 				display: flex
+// 				.imgbox
+// 					flex: 0 0 50%
+// 					img
+// 						width: 100%
+// 				.form-wrapper
+// 					flex: 0 0 50%
+// 					background: white
+// 					padding: 42px 30px
+// 				@media (max-width: 767.9px)
+// 					display: block
+// 					.imgbox
+// 					.form-wrapper
+// 						padding: 15px
+// 						position: absolute
+// 						width: 100%
+// 						height: 100%
+// 						top: 0
+// 						left: 0
+// 						background: rgba(255,255,255,.85)
+// 						display: flex
+// 						flex-direction: column
+// 						justify-content: center
+// 				h4,p
+// 					margin: 0
+// 					text-align: center
+// 				h4
+// 					font-size: 32px
+// 					margin-bottom: 12ox
+// 				p
+// 					font-size: 16px
+// 					margin-bottom: 24px
+// 				.form-group
+// 					display: flex
+// 					flex-direction: column
+// 					input
+// 						border: 1px solid rgba(0,0,0,.4)
+// 						height: 35px
+// 						background: white
+// 						padding: 0 12px
+// 						width: 100%
+// 						margin-bottom: 24px
+// 					button
+// 						border: 1px solid rgba(0,0,0,.4)
+// 						height: 35px
+// 						background: white
+// 						text-transform: uppercase
+// 						margin: auto
+// 						padding: 0 15px
+.hidden
+	display: none!important
+
+.fancybox-content
+	overflow: unset!important
+	padding: 0
+	background: transparent
+	.fancybox-close-small
+		width: 35px
+		height: 35px
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+		opacity: 1
+		@media (min-width: 992px)
+			border-radius: 50%
+			background: darken(white, 4%)
+			transform: translate(50%,-50%)
+			box-shadow: 0 0 2px map-get($mau, main)
+		svg
+			display: none
+		&:before
+			line-height: 1
+			font-family: "Linearicons-Free"
+			content: "\e870"
+			font-size: 24px
+			color: map-get($mau, main)
+			display: flex
+			justify-content: center
+			align-items: center
+		@media (max-width: 991.9px)
+			top: 0
+			left: unset
+			right: 0
+			bottom: unset
+			transform: unset
+			&:before
+				color: white
+	&#popup_1
+		.modal-body
+			border-radius: 10px
+			overflow: hidden
+		.modal-footer
+			text-align: center
+			a
+				color: rgba(255,255,255,.5)
+				font-size: 13px
+				text-decoration: none
+	&#popup_2
+		width: 100%
+		padding: 0 15px
+		max-width: 420px
+		background: black
+		height: 100%
+		padding: 60px 15px
+		color: white
+		height: unset
+		.title
+			figure
+				margin: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				margin-bottom: 16px
+				.imgbox
+					flex: 0 0 60px
+				figcaption
+					flex-basis: 0
+					flex-grow: 0
+					min-width: 220px
+					padding-left: 15px
+			h4,p
+				margin: 0
+			h4
+				font-size: 28px
+				font-weight: 700
+				text-transform: uppercase
+			p
+				font-size: 13px
+		.description
+			text-align: center
+			margin-bottom: 32px
+		.button
+			display: flex
+			justify-content: center
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				border: 1px solid white
+				border-radius: 8px
+				overflow: hidden
+				img
+					width: 100%
+					max-height: 60px
+				+ a
+					margin-left: 10px
+	&#popup_3
+		.fancybox-close-small
+			&:before
+				color: map-get($mau, main)
+		.form
+			max-width: 800px
+			position: relative
+			display: flex
+			.imgbox
+				flex: 0 0 50%
+				img
+					width: 100%
+			.form-wrapper
+				flex: 0 0 50%
+				background: white
+				padding: 42px 30px
+			@media (max-width: 767.9px)
+				display: block
+				.form-wrapper
+					padding: 15px
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					background: rgba(255,255,255,.85)
+					display: flex
+					flex-direction: column
+					justify-content: center
+			h4,p
+				margin: 0
+				text-align: center
+			h4
+				font-size: 32px
+				margin-bottom: 12ox
+			p
+				font-size: 16px
+				margin-bottom: 16px
+			.form-group
+				display: flex
+				flex-direction: column
+				margin-bottom: 16px
+				label:nth-child(1)
+					display: none
+				span:nth-child(3)
+					margin-top: 6px
+					font-family: "Arima Madurai",cursive
+					color: red
+					&:before
+						font-family: "Font Awesome 5 Free"
+						font-weight: 900
+				input
+					border: 1px solid rgba(0,0,0,.4)
+					height: 35px
+					background: white
+					padding: 0 12px
+					width: 100%
+					margin-bottom: 24px
+					margin-bottom: 0
+			input[type="submit"]
+				border: 1px solid rgba(0,0,0,.4)
+				height: 35px
+				background: white
+				text-transform: uppercase
+				padding: 0 15px
+				margin: 0 auto
+				min-width: 150px
+				display: flex
+				align-items: center
+				justify-content: center
+.Module-193
+	.frm-btnwrap
+		display: none

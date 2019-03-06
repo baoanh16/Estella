@@ -82,4 +82,27 @@ $(document).ready(function () {
 	}
 	// Location
 	location.toggleTabLocation();
+
+	$("a.facybox").fancybox()
+
+
+	if ($('.Module-192 .ModuleContent .hidden>a').attr('id') == "link_popup_3") {
+		$('.Module-193').appendTo("#popup_3")
+		$('.Module-193 .frm-btn input[type="submit"]').appendTo('.Module-193 .form .form-wrapper')
+		$('.Module-192 .ModuleContent .hidden>a').fancybox({
+			afterLoad: function () {
+				// setTimeout(function () {
+				// 	$("body .fancybox-container").appendTo("#aspnetForm")
+				// }, 600)
+			}
+		})
+	} else {
+		$('.Module-192 .ModuleContent .hidden>a').fancybox()
+	}
+
+	$('.Module-192 .ModuleContent .hidden>a').trigger('click').delay(500, function () {
+		$("body .fancybox-container").appendTo("#aspnetForm")
+		// setTimeout(function () {
+		// }, 600)
+	})
 })

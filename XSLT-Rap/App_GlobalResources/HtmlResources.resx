@@ -304,4 +304,8 @@
 	<data name="ServiceOtherText" xml:space="preserve">
 		<value>Service Other</value>
 	</data>
+	
+	<data name="PlaceholderSearchText" xml:space="preserve">
+		<value>Quick Search (E.g: Annam Gourmet)</value>
+	</data>
 </root>

@@ -2,7 +2,8 @@
 	"styles": [
 		"bower_components/mdi/css/materialdesignicons.min.css",
 		"bower_components/swiper/dist/css/swiper.min.css",
-		"bower_components/fancybox/dist/jquery.fancybox.min.css"
+		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"bower_components/linearicons/dist/web-font/style.css"
 	],
 	"scripts": [
 		"bower_components/jquery/dist/jquery.min.js",
