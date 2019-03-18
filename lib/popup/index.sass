@@ -1,181 +1,4 @@
-// .body-hidden
-// 	overflow-y: hidden
-// 	padding-right: 16px
-	
-// .modal
-// 	position: fixed
-// 	top: 0
-// 	left: 0
-// 	width: 100%
-// 	height: 100%
-// 	display: none
-// 	justify-content: center
-// 	align-items: center
-// 	z-index: 99990
-// 	&.open
-// 		display: flex
-// 	.overlay
-// 		position: absolute
-// 		width: 100%
-// 		height: 100%
-// 		background: rgba(0,0,0,.7)
-// 		top: 0
-// 		left: 0
-// 		z-index: 99991
-// 	.modal-content
-// 		position: relative
-// 		max-width: 800px
-// 		z-index: 99992
-// 	.modal-body
-// 		overflow: hidden
-// 	.modal-close
-// 		display: flex
-// 		justify-content: center
-// 		align-items: center
-// 		cursor: pointer
-// 		span
-// 			line-height: 1
-// 			font-size: 30px
-// 			color: white
-// 	&#popup-1
-// 		.modal-content
-// 			padding: 0 15px
-// 		.modal-close
-// 			position: absolute
-// 			top: 0
-// 			right: 15px
-// 			width: 30px
-// 			height: 30px
-// 		.modal-body
-// 			width: 100%
-// 			border-radius: 10px
-// 			display: flex
-// 			justify-content: center
-// 			align-items: center
-// 			a
-// 				display: inline-flex
-// 				align-items: center
-// 				justify-content: center
-// 			img
-// 				width: 100%
-// 	&#popup-2
-// 		.modal-close
-// 			position: absolute
-// 			top: 0
-// 			right: 15px
-// 			span
-// 				color: white
-// 		.overlay
-// 			background: transparent
-// 		.modal-content
-// 		.modal-body
-// 			width: 100%
-// 			padding: 0 15px
-// 			max-width: 420px
-// 			background: black
-// 			height: 100%
-// 			padding: 60px 15px
-// 			color: white
-// 			.title
-// 				figure
-// 					margin: 0
-// 					display: flex
-// 					align-items: center
-// 					margin-bottom: 16px
-// 					.imgbox
-// 						flex: 0 0 50px
-// 					figcaption
-// 						flex-basis: 0
-// 						flex-grow: 1
-// 						padding-left: 15px
-// 				h4,p
-// 					margin: 0
-// 				h4
-// 					font-size: 28px
-// 					font-weight: 700
-// 					text-transform: uppercase
-// 				p
-// 					font-size: 13px
-// 			.description
-// 				text-align: center
-// 				margin-bottom: 32px
-// 			.button
-// 				display: flex
-// 				justify-content: center
-// 				a
-// 					display: flex
-// 					justify-content: center
-// 					align-items: center
-// 					border: 1px solid white
-// 					border-radius: 8px
-// 					overflow: hidden
-// 					img
-// 						width: 100%
-// 						max-height: 60px
-// 					+ a
-// 						margin-left: 10px
-// 	&#popup-3
-// 		.modal-close
-// 			position: absolute
-// 			top: 0
-// 			right: 15px
-// 			z-index: 1
-// 			span
-// 				color: lighten(black,20%)
-// 		.modal-content
-// 			padding: 0 15px
-// 		.modal-body
-// 			.form
-// 				position: relative
-// 				display: flex
-// 				.imgbox
-// 					flex: 0 0 50%
-// 					img
-// 						width: 100%
-// 				.form-wrapper
-// 					flex: 0 0 50%
-// 					background: white
-// 					padding: 42px 30px
-// 				@media (max-width: 767.9px)
-// 					display: block
-// 					.imgbox
-// 					.form-wrapper
-// 						padding: 15px
-// 						position: absolute
-// 						width: 100%
-// 						height: 100%
-// 						top: 0
-// 						left: 0
-// 						background: rgba(255,255,255,.85)
-// 						display: flex
-// 						flex-direction: column
-// 						justify-content: center
-// 				h4,p
-// 					margin: 0
-// 					text-align: center
-// 				h4
-// 					font-size: 32px
-// 					margin-bottom: 12ox
-// 				p
-// 					font-size: 16px
-// 					margin-bottom: 24px
-// 				.form-group
-// 					display: flex
-// 					flex-direction: column
-// 					input
-// 						border: 1px solid rgba(0,0,0,.4)
-// 						height: 35px
-// 						background: white
-// 						padding: 0 12px
-// 						width: 100%
-// 						margin-bottom: 24px
-// 					button
-// 						border: 1px solid rgba(0,0,0,.4)
-// 						height: 35px
-// 						background: white
-// 						text-transform: uppercase
-// 						margin: auto
-// 						padding: 0 15px
+
 .hidden
 	display: none!important
 
@@ -254,11 +77,15 @@
 				font-size: 28px
 				font-weight: 700
 				text-transform: uppercase
+				font-family: 'Roboto',sans-serif
 			p
 				font-size: 13px
+				font-style: italic
 		.description
 			text-align: center
 			margin-bottom: 32px
+			font-family: 'Roboto',sans-serif
+			font-weight: 400
 		.button
 			display: flex
 			justify-content: center
@@ -269,6 +96,8 @@
 				border: 1px solid white
 				border-radius: 8px
 				overflow: hidden
+				&:active,&:focus
+					outline: none
 				img
 					width: 100%
 					max-height: 60px
