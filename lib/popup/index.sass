@@ -52,7 +52,8 @@
 		width: 100%
 		padding: 0 15px
 		max-width: 420px
-		background: black
+		// background: map-get($mau, xanh-1)
+		background: white
 		height: 100%
 		padding: 60px 15px
 		color: white
@@ -65,7 +66,11 @@
 				justify-content: center
 				margin-bottom: 16px
 				.imgbox
-					flex: 0 0 60px
+					flex: 0 0 80px
+					max-width: 80px
+					@media (min-width: 992px)
+						flex: 0 0 100px
+						max-width: 100px
 				figcaption
 					flex-basis: 0
 					flex-grow: 0
@@ -74,14 +79,20 @@
 			h4,p
 				margin: 0
 			h4
-				font-size: 28px
 				font-weight: 700
 				text-transform: uppercase
-				font-family: 'Roboto',sans-serif
+				font-family: initial
+				color: #cb191e
+				// font-family: 'Roboto',sans-serif
+				font-size: 32px
+				@media (min-width: 992px)
+					font-size: 40px
 			p
+				color: black
 				font-size: 13px
 				font-style: italic
 		.description
+			color: black
 			text-align: center
 			margin-bottom: 32px
 			font-family: 'Roboto',sans-serif
@@ -93,7 +104,6 @@
 				display: flex
 				justify-content: center
 				align-items: center
-				border: 1px solid white
 				border-radius: 8px
 				overflow: hidden
 				&:active,&:focus
